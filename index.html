@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randrianirina Ramaherison Lucien — Développeur Multiplateforme & Full-Stack</title>
+  <meta name="description" content="Portfolio de Randrianirina Ramaherison Lucien — Développeur Mobile Flutter/Dart, Web Full-Stack (React, Node.js, PostgreSQL) et Solutions Numériques à fort impact territorial.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- EDIT FAB & TOAST (MASQUÉ PAR DÉFAUT POUR LE PUBLIC) -->
+  <button id="edit-fab" style="display:none;" title="Basculer le mode édition en direct">✏️</button>
+  <div id="edit-badge">MODE ÉDITION ACTIF</div>
+  <div id="toast"></div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <span class="badge-dot"></span>
+        Lucien<span class="highlight">.dev</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#profil" class="nav-link">À Propos</a></li>
+        <li><a href="#skills" class="nav-link">Compétences</a></li>
+        <li><a href="#projects" class="nav-link">Projets Clés</a></li>
+        <li><a href="#exp" class="nav-link">Parcours</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Changer le thème">☀️</button>
+        <button onclick="downloadCV()" class="btn btn-sm btn-primary">Mon CV 📄</button>
+        <button class="mobile-toggle" aria-label="Menu Mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU DRAWER -->
+  <div class="mobile-menu">
+    <a href="#profil">À Propos</a>
+    <a href="#skills">Compétences</a>
+    <a href="#projects">Projets Clés</a>
+    <a href="#exp">Parcours</a>
+    <a href="#contact">Contact</a>
+    <button onclick="downloadCV()" class="btn btn-primary" style="margin-top:20px;">Télécharger CV 📄</button>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header id="hero">
+    <div class="hero-background">
+      <div class="hero-grid"></div>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+    </div>
+
+    <div class="container hero-grid-layout">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse"></span>
+          <span>Disponible pour Opportunités & Collaborations</span>
+        </div>
+
+        <h1 class="hero-title">
+          Développeur <span class="gradient-text">Multiplateforme</span> & Applications Full-Stack.
+        </h1>
+
+        <p class="hero-description">
+          Conception d'applications mobiles performantes en <strong>Flutter / Dart</strong>, de plateformes web interactives et de solutions numériques à fort <strong>impact territorial, institutionnel et social</strong>.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">Explorer mes Projets 🚀</a>
+          <button onclick="downloadCV()" class="btn btn-secondary">Télécharger mon CV 📄</button>
+        </div>
+
+        <div class="hero-socials">
+          <span>Réseaux :</span>
+          <a href="https://github.com/ramaherison13" target="_blank" class="btn-icon" title="GitHub (ramaherison13)">💻</a>
+          <a href="https://www.linkedin.com/in/ramaherison-lucien-randrianirina-8461a3288/" target="_blank" class="btn-icon" title="LinkedIn">🔗</a>
+          <a href="mailto:lucienrandrianirina0@gmail.com" class="btn-icon" title="Email Direct">✉️</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="avatar-card">
+          <div class="avatar-img-wrap">
+            <img src="images/profile.svg" alt="Photo de profil Randrianirina Ramaherison Lucien" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h3 class="avatar-name">Randrianirina Lucien</h3>
+          <p class="avatar-role">Flutter & Full-Stack Engineer</p>
+          <div class="avatar-location">
+            <span>📍 Madagascar • ENI Fianarantsoa</span>
+          </div>
+        </div>
+
+        <!-- Floating tech chips -->
+        <div class="floating-chip chip-1">📱 Flutter / Dart</div>
+        <div class="floating-chip chip-2">⚡ Node.js & React</div>
+        <div class="floating-chip chip-3">🗄️ PostgreSQL</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION À PROPOS & STATS -->
+  <section id="profil" class="section-padding">
+    <div class="container">
+      <div class="section-label">01. Présentation</div>
+      <h2 class="section-title">À Propos & Vision</h2>
+
+      <div class="profil-grid">
+        <div class="profil-card reveal">
+          <p id="bio-text-1">
+            Étudiant en <strong>Master Informatique</strong> à l'ENI (École Nationale d'Informatique) de Fianarantsoa, je me passionne pour la création d'applications mobiles fluides et d'architectures web robustes.
+          </p>
+          <p id="bio-text-2">
+            Mon expertise s'exprime dans la conception d'outils numériques à fort impact — comme <strong>Itantsoroka</strong>, une plateforme multiplateforme dédiée à la monographie communale, la gestion territoriale et l'information citoyenne. J'allie compétence logicielle (Flutter, React, Node.js, SQL) et culture des réseaux/systèmes.
+          </p>
+
+          <div class="profil-tags" id="bio-tags-container">
+            <span class="tag-chip">ENI Fianarantsoa</span>
+            <span class="tag-chip">Master Informatique</span>
+            <span class="tag-chip">Flutter & Dart</span>
+            <span class="tag-chip">Impact Territorial</span>
+          </div>
+        </div>
+
+        <div class="stats-grid reveal">
+          <div class="stat-box">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Projets Majeurs Réalisés</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Années de Pratique Tech</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">Technologies Maîtrisées</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">% Code Multiplateforme</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION COMPÉTENCES -->
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <div class="section-label">02. Stack Technique</div>
+      <h2 class="section-title">Compétences & Maîtrise</h2>
+      <p class="section-subtitle">Un éventail complet d'outils pour bâtir des produits numériques de bout en bout.</p>
+
+      <div class="skills-grid reveal">
+        <!-- Mobile & Frontend -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">📱</div>
+            <div class="skill-card-title">Mobile & Frontend</div>
+          </div>
+          <div class="skill-pills" id="skills-mobile-frontend"></div>
+        </div>
+
+        <!-- Backend & APIs -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">⚙️</div>
+            <div class="skill-card-title">Backend & APIs</div>
+          </div>
+          <div class="skill-pills" id="skills-backend-api"></div>
+        </div>
+
+        <!-- Bases de données & Cloud -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">🗄️</div>
+            <div class="skill-card-title">Bases de données & Cloud</div>
+          </div>
+          <div class="skill-pills" id="skills-database-cloud"></div>
+        </div>
+
+        <!-- DevOps & Infrastructure -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">🛠️</div>
+            <div class="skill-card-title">DevOps & Admin Réseau</div>
+          </div>
+          <div class="skill-pills" id="skills-devops-system"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION PROJETS CLÉS -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <div class="section-label">03. Réalisations Phares</div>
+      <h2 class="section-title">Projets & Applications</h2>
+      <p class="section-subtitle">Découvrez mes applications multiplateformes et projets à fort impact opérationnel et social.</p>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">Tous les Projets</button>
+        <button class="filter-btn" data-filter="mobile">📱 Mobile Flutter</button>
+        <button class="filter-btn" data-filter="fullstack">💻 Web & Fullstack</button>
+        <button class="filter-btn" data-filter="devops">🛠️ Réseaux & Infrastructure</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- SECTION PARCOURS -->
+  <section id="exp" class="section-padding">
+    <div class="container">
+      <div class="section-label">04. Trajectoire</div>
+      <h2 class="section-title">Expériences & Parcours</h2>
+
+      <div class="timeline" id="timeline-list"></div>
+    </div>
+  </section>
+
+  <!-- SECTION CONTACT -->
+  <section id="contact" class="section-padding" style="background:var(--bg-alt);">
+    <div class="container">
+      <div class="section-label">05. Échangeons</div>
+      <h2 class="section-title">Contact & Opportunités</h2>
+      <p class="section-subtitle">Intéressé par mon profil pour une opportunité, une mission ou un projet multiplateforme ? N'hésitez pas à me contacter.</p>
+
+      <div class="contact-card-grid reveal">
+        <div class="contact-info-list">
+          <a href="mailto:lucienrandrianirina0@gmail.com" class="contact-item-card">
+            <div class="contact-item-icon">✉️</div>
+            <div>
+              <div class="contact-item-label">Email Professionnel</div>
+              <div class="contact-item-val">lucienrandrianirina0@gmail.com</div>
+            </div>
+          </a>
+
+          <a href="tel:+261340180549" class="contact-item-card">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <div class="contact-item-label">Téléphone / WhatsApp</div>
+              <div class="contact-item-val">+261 34 01 805 49</div>
+            </div>
+          </a>
+
+          <div class="contact-item-card">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Localisation</div>
+              <div class="contact-item-val">Toliara II & Fianarantsoa, Madagascar</div>
+            </div>
+          </div>
+
+          <div class="contact-item-card" style="gap:14px;">
+            <a href="https://github.com/ramaherison13" target="_blank" class="btn btn-sm btn-outline">GitHub (ramaherison13) ↗</a>
+            <a href="https://www.linkedin.com/in/ramaherison-lucien-randrianirina-8461a3288/" target="_blank" class="btn btn-sm btn-primary">Profil LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <h3 style="font-family:var(--font-heading);font-size:1.3rem;margin-bottom:12px;">Une opportunité à discuter ?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:24px;">Je réponds rapidement à tous les messages et propositions de recrutement.</p>
+          <a href="mailto:lucienrandrianirina0@gmail.com" class="btn btn-primary" style="width:100%;">Me contacter par email 📧</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 — Randrianirina Ramaherison Lucien. Tous droits réservés.</div>
+      <div>
+        <a href="javascript:void(0)" id="admin-footer-link" onclick="openAdminModal()" style="color:var(--text-muted);font-size:0.75rem;margin-right:16px;">🔒 Connexion Admin</a>
+        <a href="#hero" class="highlight">Haut de page ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ADMIN LOGIN MODAL -->
+  <div class="modal-overlay" id="modal-admin-login">
+    <div class="modal" style="max-width:440px;">
+      <div class="modal-header">
+        <div class="modal-title">🔐 Connexion Administrateur</div>
+        <button class="modal-close" onclick="closeModal('modal-admin-login')">✕</button>
+      </div>
+      <div style="margin-bottom:20px;color:var(--text-secondary);font-size:0.9rem;">
+        Entrez votre mot de passe secret pour déverrouiller le mode édition du portfolio.
+      </div>
+      <div class="form-group">
+        <label class="form-label">Mot de passe Admin</label>
+        <input type="password" id="admin-passcode-input" class="form-input" placeholder="••••••••" onkeyup="if(event.key==='Enter') verifyAdminPasscode()">
+      </div>
+      <div style="display:flex;gap:12px;margin-top:24px;">
+        <button class="btn btn-primary" style="flex:1;" onclick="verifyAdminPasscode()">Se connecter</button>
+        <button class="btn btn-outline" onclick="closeModal('modal-admin-login')">Annuler</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DETAIL MODAL -->
+  <div class="modal-overlay" id="modal-detail">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">Détails du Projet</div>
+        <button class="modal-close" onclick="closeModal('modal-detail')">✕</button>
+      </div>
+      <div id="detail-modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
